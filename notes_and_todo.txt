@@ -1,0 +1,42 @@
+### Notes and things to do
+
+
+
+### Example Config file (JSON)
+{
+  "system": {
+    "logfile": "test_delete_me.log",
+    "debug": false
+  },
+  "ga": {
+    "populationSize": 100,
+    "mutationRate": 0.07,
+    "xoverPoolSizeRatio": 0.5,
+    "selectionStrategy": "normal"
+  },
+  "agent": {
+    "startingCash": 10000,
+    "buyGenes": [
+      "sma_percent_above.rb",
+      "percent_change_pos.rb",
+      "time_since_last_buy.rb",
+      "time_since_last_sell.rb",
+      "have_settled_cash.rb"
+    ],
+    "sellGenes": [
+      "sma_percent_above.rb",
+      "percent_change_pos.rb",
+      "time_since_last_buy.rb",
+      "time_since_last_sell.rb",
+      "own_stock.rb"
+    ],
+    "holdGenes": [
+      "sma_percent_above.rb",
+      "percent_change_pos.rb",
+      "time_since_last_buy.rb",
+      "time_since_last_sell.rb",
+      "buy_sell_signals_close.rb"
+    ]
+  }
+}
+
