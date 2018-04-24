@@ -1,1 +1,1 @@
-puts "hello"
+require "util.rb"
