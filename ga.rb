@@ -1,5 +1,3 @@
-load "individual.rb"
-
 class GA
   attr_accessor :population_size
   attr_accessor :mutation_rate
@@ -13,9 +11,9 @@ class GA
     @population = Array.new
   end
 
-  def create_population(individual)
+  def create_population(conf)
     (0..population_size).each do
-      @population << individual.new
+      @population << Agent.new(conf)
     end
   end
 end

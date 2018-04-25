@@ -1,6 +1,7 @@
 require 'json'
-load "util.rb"
-load "ga.rb"
+require 'util'
+require 'ga'
+require 'agent'
 
 # load configuration
 if ARGV.empty?
@@ -19,4 +20,6 @@ ga = GA.new(
 )
 puts "Created GA -> population: #{ga.population_size}, mutation rate: #{ga.mutation_rate},
   xover pool size ratio: #{ga.xover_pool_size_ratio}"
-ga.create_population(Individual.new(config))  # In the future we can choose the type of individual to evolve?
+
+# create the population. In future we will be able to change individual
+ga.create_population(config)

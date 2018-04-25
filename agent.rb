@@ -1,5 +1,6 @@
 
-class Individual
+class Agent
+
   def initialize(conf)
     # make our genome arrays
     buy_genes = Array.new
@@ -11,7 +12,7 @@ class Individual
 
     # Now load in the appropriate files/classes for genome
     conf["agent"]["buyGenes"].each do |filename|
-      buy_genes << get_new_class_object_from_filename(filename)
+      buy_genes << get_new_class_object_from_filename(filename) #does init work???
     end
     conf["agent"]["sellGenes"].each do |filename|
       sell_genes << get_new_class_object_from_filename(filename)
@@ -20,7 +21,7 @@ class Individual
       hold_genes << get_new_class_object_from_filename(filename)
     end
   # init end
-  
+
   end
 # class end
 end
